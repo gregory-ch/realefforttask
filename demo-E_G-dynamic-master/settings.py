@@ -23,10 +23,10 @@ SESSION_CONFIGS = [
         'num_demo_participants': 1,
         'app_sequence': ['mpl'],
     },{
-        'name': 'scl',
+        'name': 'EGA',
         'display_name': "Single Choice List",
         'num_demo_participants': 1,
-        'app_sequence': ['scl'],
+        'app_sequence': ['EGA'],
     },
 ]
 

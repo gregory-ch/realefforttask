@@ -7,7 +7,7 @@
 {# *** STYLES *** #}
 {# ****************************************************************************************************************** #}
 {% block styles %}
-    <link href="{% static 'scl/css/custom.css' %}" rel="stylesheet"/>
+    <link href="{% static 'EGA/css/custom.css' %}" rel="stylesheet"/>
 {% endblock %}
 
 
@@ -27,9 +27,9 @@
     <div class="wrapper instructions">
         <p>
             {% blocktrans trimmed with n=num_lotteries %}
-                In the following, you'll be presented {{ n }} different lotteries on your screen.
+                The task is consisted {{ num_rounds }} rounds. In each round you'll be presented {{ n }} different lotteries on your screen.
                 Each of these lotteries is characterized by varying outcomes A and B. The probability that A or B is
-                realized is constant for all lotteries, with p for outcome A and 1-p for outcome
+                realized will be displayed in the screen for all lotteries, with p for outcome A and 1-p for outcome
                 B. You are asked to indicate which of the lottery you prefer to play.
             {% endblocktrans %}
         </p>

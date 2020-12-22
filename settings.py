@@ -16,34 +16,41 @@ ROOMS = [{'display_name': 'LESH',
 
 SESSION_CONFIGS = [
     {
-        'name': 'realefforttask',
-        'display_name': "Realefforttask",
+        'name': 'dynamic_tasks_MM_EGA_EGR',
+        'display_name': "dynamic_tasks_MM_EGA_EGR",
         'num_demo_participants': 1,
-        'app_sequence': ['realefforttask','cem', 'mpl', 'my_survey_eng'],
+        'app_sequence': ['realefforttask', 'EGA','EGR','my_survey_eng'],
+    },
+    # {
+    #     'name': 'cem',
+    #     'display_name': "cem",
+    #     'num_demo_participants': 1,
+    #     'app_sequence': ['cem'],
+    # },
+    # {
+    #     'name': 'icl',
+    #     'display_name': "icl",
+    #     'num_demo_participants': 1,
+    #     'app_sequence': ['icl'],
+    # },
+    # {
+    #     'name': 'mpl',
+    #     'display_name': "mpl",
+    #     'num_demo_participants': 1,
+    #     'app_sequence': ['mpl'],
+    # },
+
+    {
+        'name': 'EGA',
+        'display_name': "EGA",
+        'num_demo_participants': 1,
+        'app_sequence': ['EGA'],
     },
     {
-        'name': 'cem',
-        'display_name': "cem",
+        'name': 'dynamic_tasks_EGA_MM_EGR',
+        'display_name': "dynamic_tasks_EGA_MM_EGR",
         'num_demo_participants': 1,
-        'app_sequence': ['cem'],
-    },
-    {
-        'name': 'icl',
-        'display_name': "icl",
-        'num_demo_participants': 1,
-        'app_sequence': ['icl'],
-    },
-    {
-        'name': 'mpl',
-        'display_name': "mpl",
-        'num_demo_participants': 1,
-        'app_sequence': ['mpl'],
-    },
-    {
-        'name': 'scl',
-        'display_name': "scl",
-        'num_demo_participants': 1,
-        'app_sequence': ['scl','my_survey_eng'],
+        'app_sequence': ['EGA', 'realefforttask', 'EGR','my_survey_eng'],
     },
 ]
 

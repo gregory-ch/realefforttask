@@ -31,7 +31,7 @@ class DifficultyLevel(int):
 class Constants(BaseConstants):
     name_in_url = 'realefforttask'
     players_per_group = None
-    num_rounds = 20
+    num_rounds = 2
     task_time = 45
     lb = 65
     ub = 101

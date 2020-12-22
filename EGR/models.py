@@ -6,9 +6,9 @@ from EGR.config import *
 import random
 
 
-author = 'Felix Holzmeister'
+author = 'Chernov Grigory'
 doc = """
-Lottery choice task as proposed by Eckel/Grossman (2002), Evolution and Human Behavior 23 (4), 281–295.
+dynamic vers of lottery choice task as proposed by Eckel/Grossman (2002), Evolution and Human Behavior 23 (4), 281–295.
 """
 
 

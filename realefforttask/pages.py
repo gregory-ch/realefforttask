@@ -5,6 +5,15 @@ from .models import Constants
 
 class Intro(Page):
     pass
+    def is_displayed(self):
+        return self.round_number == 1
+    def vars_for_template(self):
+
+        num_rounds = Constants.num_rounds
+        return {
+
+            'num_rounds': num_rounds
+        }
 
 class ChoosingDiff(Page):
     form_model = 'player'

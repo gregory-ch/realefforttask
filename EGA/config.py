@@ -30,6 +30,13 @@ class Constants(BaseConstants):
     # cautious delta need to be 0<delta<1;  and  0.5- num_lotteries*delta <= 0
     probability_delta = 10
 
+    # stuck is size of the cluster of equal elements in sequense of ambiguity ranges
+    # e.g. for n = 6 and stuck = 2 it would be ['0-40', '0-40', '10-50', '10-50', '20-60', '20-60']
+    stuck = 2
+
+    # range size is the max number in diapason of element in ambiguity ranges
+    range_delta = 40
+
     # additional lottery to separate risk-loving from risk-neutral preferences
     # if <risk_loving = True>, a lottery with the same expected value but a higher st. dev. as lottery <N> is added
     # note that <risk_loving = True> implies that the overall number of lotteries rendered will be <num_lotteries> + 1
@@ -59,4 +66,4 @@ class Constants(BaseConstants):
     # ---------------------------------------------------------------------------------------------------------------- #
     name_in_url = 'EGA'
     players_per_group = None
-    num_rounds = 3
+    num_rounds = 2

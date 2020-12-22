@@ -17,14 +17,16 @@ from .models import Constants
 # *** CLASS INSTRUCTIONS *** #
 # ******************************************************************************************************************** #
 class Instructions(Page):
-
+    def is_displayed(self):
+        return self.round_number == 1
     # variables for template
     # ----------------------------------------------------------------------------------------------------------------
     def vars_for_template(self):
         num_lotteries = Constants.num_lotteries + 1 if Constants.risk_loving else Constants.num_lotteries
-
+        num_rounds = Constants.num_rounds
         return {
-            'num_lotteries': num_lotteries
+            'num_lotteries': num_lotteries,
+            'num_rounds': num_rounds
         }
 
 
@@ -45,7 +47,7 @@ class Decision(Page):
     # ----------------------------------------------------------------------------------------------------------------
     def vars_for_template(self):
         return {
-            'lotteries': self.player.participant.vars['scl_lotteries']
+            'lotteries': self.player.participant.vars['scl_lotteries_ega']
         }
 
     # set payoff
@@ -67,13 +69,15 @@ class Results(Page):
             self.player.outcome_lo,
             self.player.outcome_hi,
             self.player.p_lo,
-            self.player.p_hi
+            self.player.p_hi,
+            self.player.p_range_lo,
+            self.player.p_range_hi,
         )
 
         return {
             'lottery_choice': self.player.lottery_choice,
             'outcome_to_pay': self.player.outcome_to_pay,
-            'index':          self.player.participant.vars['scl_lotteries'].index(lottery) + 1,
+            'index':          self.player.participant.vars['scl_lotteries_ega'].index(lottery) + 1,
             'hi_lo':          "B" if self.player.outcome_to_pay == "high" else "A",
             'lottery':        [lottery]
         }
